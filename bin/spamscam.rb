@@ -5,8 +5,9 @@ require 'httparty'
 require 'faker'
 require 'base64'
 
-file_exists = File.file?('./big-file.jpg')
-password    = file_exists ? Base64.encode64(File.read('./big-file.jpg')).gsub(/\n/,'') : Faker::Internet.password
+file_path   = './big-file.jpg'
+file_exists = File.file?(file_path)
+password    = file_exists ? Base64.encode64(File.read(file_path)).gsub(/\n/,'') : Faker::Internet.password
 
 loop do
   email = Faker::Internet.email
