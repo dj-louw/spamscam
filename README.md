@@ -1,0 +1,2 @@
+# spamscam
+Spam the Scammers
