@@ -7,7 +7,6 @@ require 'base64'
 
 file_path   = './10MB.zip'
 file_exists = File.file?(file_path)
-print file_exists
 password    = file_exists ? Base64.encode64(File.read(file_path)).gsub(/\n/,'') : Faker::Internet.password
 
 loop do
